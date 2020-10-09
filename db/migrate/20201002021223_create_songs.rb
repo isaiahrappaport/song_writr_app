@@ -5,7 +5,7 @@ class CreateSongs < ActiveRecord::Migration[6.0]
       t.string :audio_file
       t.string :lyrics
       t.string :privacy
-      t.string :user_id
+      t.integer :user_id
 
       t.timestamps
     end

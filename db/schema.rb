@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_02_021407) do
+ActiveRecord::Schema.define(version: 2020_10_09_014336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,23 @@ ActiveRecord::Schema.define(version: 2020_10_02_021407) do
     t.string "audio_file"
     t.string "lyrics"
     t.string "privacy"
-    t.string "user_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "suggestions", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "text"
+    t.integer "agree"
+    t.integer "song_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tips", force: :cascade do |t|
+    t.string "title"
+    t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
