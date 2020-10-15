@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create(name: "Isaiah", email_address: "test@example.com", password_digest: "password", username: "usertest", profile_picture: "test.jpg")
+user = User.create(name: "Isaiah", email: "test@example.com", password_digest: "password", username: "usertest", profile_picture: "test.jpg")
 
 song = Song.create(title: "untitled1", audio_file: "untitled1.mp3", lyrics: "sjdnfjkdsf", privacy: "private", user_id: 1)
 
