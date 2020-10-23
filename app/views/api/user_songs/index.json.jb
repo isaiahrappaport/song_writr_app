@@ -1,0 +1,9 @@
+@songs.map do |song|
+  {
+    id: song.id,
+    username: current_user.username,
+    title: song.title,
+    audio_file: song.audio_file,
+    lyrics: song.lyrics,
+  }
+end

@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
     # user songs routes
 
+    get "/user_songs" => "user_songs#index"
+
     # suggestions routes
 
     # backing track routes
