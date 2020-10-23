@@ -1,3 +1,12 @@
-{
-  user: @users,
-}
+# figure out how to make only one view and render partial: user.json.jb, locals: { user: user }
+@users.map do |user|
+  {
+    id: user.id,
+    name: user.name,
+    username: user.username,
+    profile_picture: user.profile_picture,
+    email: user.email,
+    songs: user.songs,
+    suggestions: user.suggestions,
+  }
+end
