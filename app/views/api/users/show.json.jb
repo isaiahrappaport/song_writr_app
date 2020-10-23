@@ -1,9 +1,1 @@
-{
-  id: @user.id,
-  name: @user.name,
-  username: @user.username,
-  profile_picture: @user.profile_picture,
-  email: @user.email,
-  songs: @user.songs,
-  suggestions: @user.suggestions,
-}
+render partial: "user.json.jb", locals: { user: @user }

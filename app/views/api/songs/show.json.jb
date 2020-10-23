@@ -1,0 +1,1 @@
+render partial: "song.json.jb", locals: { song: @song }

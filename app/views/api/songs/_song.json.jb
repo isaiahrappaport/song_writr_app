@@ -1,0 +1,9 @@
+{
+  id: song.id,
+  user_id: song.user_id,
+  title: song.title,
+  audio: song.audio_file,
+  lyrics: song.lyrics,
+  privacy: song.privacy,
+
+}

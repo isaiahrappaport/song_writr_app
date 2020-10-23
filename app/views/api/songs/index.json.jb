@@ -1,0 +1,3 @@
+@songs.map do |song|
+  render partial: "song.json.jb", locals: { song: song }
+end
