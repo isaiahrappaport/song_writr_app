@@ -4,6 +4,5 @@
   title: song.title,
   audio: song.audio_file,
   lyrics: song.lyrics,
-  privacy: song.privacy,
-
+  suggestions: song.suggestions,
 }
