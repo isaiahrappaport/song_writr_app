@@ -12,9 +12,11 @@ class Api::SongsController < ApplicationController
   end
 
   def create
+    response = Cloudinary::Uploader.upload(params[:audio_file], resource_type: :auto)
+    cloudinary_url = response["secure_url"]
     @song = Song.new(
       title: params[:title],
-      audio_file: params[:audio_file],
+      audio_file: cloudinary_url,
       lyrics: params[:lyrics],
       privacy: params[:privacy],
       user_id: current_user.id,
@@ -28,6 +30,8 @@ class Api::SongsController < ApplicationController
   end
 
   def update
+    response = Cloudinary::Uploader.upload(params[:audio_file])
+    cloudinary_url = response["secure_url"]
     @song = Song.find_by(id: params[:id])
     @song.title = params[:title] || @song.title
     @song.audio_file = params[:audio_file] || @song.audio_file
