@@ -1,0 +1,8 @@
+suggestions = @suggestions.map do |suggestion|
+  {
+    user_id: suggestion.user_id,
+    username: suggestion.user.username,
+    text: suggestion.text,
+    song_id: suggestion.song_id,
+  }
+end

@@ -25,14 +25,12 @@ Rails.application.routes.draw do
     get "/user_songs" => "user_songs#index"
     get "/user_songs/:id" => "user_songs#show"
 
-    # suggestions routes
+    # rhyming generator
+    get "/rhymes/:word" => "rhymes#index"
 
-    # backing track routes
+    #suggestions
 
-    # tips routes
-
-    # api lyrics analyzer routes
-
-    # api songs analyzer routes
+    get "/suggestions" => "suggestions#index"
+    post "/suggestions" => "suggestions#create"
   end
 end

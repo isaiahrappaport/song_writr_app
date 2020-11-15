@@ -1,8 +1,18 @@
 {
   id: song.id,
   user_id: song.user_id,
+  username: song.user.username,
+  profile_picture: song.user.profile_picture,
   title: song.title,
   audio: song.audio_file,
   lyrics: song.lyrics,
-  suggestions: song.suggestions,
+  suggestions: song.suggestions.map do |suggestion|
+    {
+      id: suggestion.id,
+      user_id: suggestion.user_id,
+      username: suggestion.user.username,
+      text: suggestion.text,
+      song_id: suggestion.song_id,
+    }
+  end,
 }
