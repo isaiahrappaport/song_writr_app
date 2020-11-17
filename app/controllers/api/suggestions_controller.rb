@@ -12,6 +12,10 @@ class Api::SuggestionsController < ApplicationController
       text: params[:text],
       song_id: params[:song_id],
     )
-    render "show.json.jb"
+    if @suggestion.save
+      render "show.json.jb"
+    else
+      render json: { errors: @suggestion.errors.full_messages }, status: 422
+    end
   end
 end
